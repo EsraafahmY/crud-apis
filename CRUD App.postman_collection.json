@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "3e96b7e8-5b82-40fe-8683-ebe729c193b4",
+		"name": "CRUD App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23535985"
+	},
+	"item": [
+		{
+			"name": "add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":3,\n    \"firstName\":\"esraa\",\n    \"lastName\":\"fahmy\",\n    \"email\":\"esraafahmy03@gmail.com\",\n    \"salary\":25000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/addUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"addUser"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8080/addUser",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\":\"esraa2\",\n    \"lastName\":\"fahmy\",\n    \"email\":\"esraafahmy03@gmail.com\",\n    \"salary\":25000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/addUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"addUser"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Feb 2023 04:11:05 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"firstName\": \"esraa2\",\n    \"email\": \"esraafahmy03@gmail.com\",\n    \"phoneNumer\": null,\n    \"hireDate\": null,\n    \"salary\": 25000,\n    \"managerId\": null,\n    \"departmentId\": null,\n    \"lastName\": \"fahmy\"\n}"
+				}
+			]
+		},
+		{
+			"name": "allEmployees",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:9090/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "allEmployees",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:9090/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Feb 2023 04:12:02 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"firstName\": \"esraa2\",\n        \"email\": \"esraafahmy03@gmail.com\",\n        \"phoneNumer\": null,\n        \"hireDate\": null,\n        \"salary\": 25000,\n        \"managerId\": null,\n        \"departmentId\": null,\n        \"lastName\": \"fahmy\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":\"1\"}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/deleteuser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"deleteuser"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
